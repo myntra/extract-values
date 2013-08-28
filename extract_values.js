@@ -45,10 +45,10 @@
 		return output;
 	};
 
-	if (typeof(window) !== "undefined") {
+	if (typeof window !== "undefined") {
 		window.extractValues = extractValues;
 	} 
-	if(module){
+	if(typeof module !== 'undefined'){
 		module.exports = extractValues;
 	}
 
