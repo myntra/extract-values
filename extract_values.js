@@ -7,7 +7,7 @@
 		var whitespace = options.whitespace;
 
 		var special_chars_regex = /[\\\^\$\*\+\.\?\(\)]/g;
-		var token_regex = new RegExp( delimiters[0] + "([^" + delimiters.join("") + "\t\r\n]+)" + delimiters[1], "g");
+		var token_regex = new RegExp(delimiters[0] + "([^" + delimiters.join("") + "\t\r\n]+)" + delimiters[1], "g");
 		var tokens = pattern.match(token_regex);
 		var pattern_regex = new RegExp(pattern.replace(special_chars_regex, "\\$&").replace(token_regex, "(\.+)"));
 
@@ -31,23 +31,24 @@
 			return null;
 		}
 
-    // Allow exact string matches to return an empty object instead of null
-    if (!tokens) {
-      return (str === pattern) ? {} : null;
-    }
+		// Allow exact string matches to return an empty object instead of null
+		if (!tokens) {
+			return (str === pattern) ? {} : null;
+		}
 
 		matches = matches.splice(1);
 		var output = {};
-		for (var i=0; i < tokens.length; i++) {
-			output[tokens[i].replace( new RegExp( delimiters[0] + "|" + delimiters[1], "g"), "")] = matches[i];
+		for (var i = 0; i < tokens.length; i++) {
+			output[tokens[i].replace(new RegExp(delimiters[0] + "|" + delimiters[1], "g"), "")] = matches[i];
 		}
 
 		return output;
 	};
 
-	if(typeof(window) !== "undefined") {
+	if (typeof(window) !== "undefined") {
 		window.extractValues = extractValues;
-	} else {
+	} 
+	if(module){
 		module.exports = extractValues;
 	}
 
