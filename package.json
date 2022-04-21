@@ -1,12 +1,12 @@
 {
-  "name": "extract-values",
+  "name": "@myntra/extract-values",
   "description": "A simple helper to extract values from a string based on a pattern.",
   "keywords": [
     "regex",
     "pattern matching",
     "strings"
   ],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/laktek/extract-values",
   "author": "Lakshan Perera <lakshan@web2media.net> (http://laktek.com)",
   "licenses": "MIT",
