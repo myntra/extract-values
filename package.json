@@ -1,5 +1,5 @@
 {
-  "name": "@myntra/extract-values",
+  "name": "myntra-extract-values",
   "description": "A simple helper to extract values from a string based on a pattern.",
   "keywords": [
     "regex",
